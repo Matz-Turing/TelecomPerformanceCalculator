@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Pos?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculadoradesempenho.HelloController" spacing="10" alignment="CENTER">
+  <Label text="Largura de Banda (Hz):"/>
+  <TextField fx:id="larguraBandaField" promptText="Insira largura de banda" />
+
+  <Label text="Relação Sinal-Ruído (SNR):"/>
+  <TextField fx:id="snrField" promptText="Insira SNR" />
+
+  <Button fx:id="calcularButton" text="Calcular" />
+
+  <!-- Barra de progresso -->
+  <ProgressBar fx:id="progressBar" progress="0.0" prefWidth="200" visible="false" />
+
+  <Label fx:id="resultadoLabel" text="Resultado:"/>
+
+  <!-- Gráfico -->
+  <LineChart fx:id="grafico" prefWidth="400" prefHeight="300">
+    <xAxis>
+      <NumberAxis label="Largura de Banda (Hz)" />
+    </xAxis>
+    <yAxis>
+      <NumberAxis label="Capacidade do Canal (bps)" />
+    </yAxis>
+  </LineChart>
+</VBox>
